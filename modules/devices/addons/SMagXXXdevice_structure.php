@@ -91,5 +91,12 @@ $this->device_types['MagXXXdevice'] = array(
             'left'=>array('DESCRIPTION'=>'key LEFT'),
             'rigth'=>array('DESCRIPTION'=>'key RIGTH'),
 
-        )
+        ),
+     'INJECTS'=>array(
+        'OperationalModes'=>array(
+            //'System.stateChanged'=>'SXiGatewayRGB_injects')
+    )
 );
+        
+@include_once(ROOT . 'languages/SMagXXXdevice_' . SETTINGS_SITE_LANGUAGE . '.php');
+@include_once(ROOT . 'languages/SMagXXXdevice_default' . '.php');
