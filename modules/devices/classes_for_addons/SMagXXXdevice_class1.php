@@ -7,8 +7,7 @@
 
 class MAG250 {
 // scan device
-function scan_device()
-    {
+function scan_device() {
     $arr = array(
         'protocol' => 'remote_stb_1.0',
         'port' => 6777
@@ -39,8 +38,7 @@ function scan_device()
     }
 // send command to device and wait answer from device 1-ok 0-false
 // command must be array
-function send_command($ip, $command, $password)
-    {
+function send_command($ip, $command, $password) {
     // create socket
     $sock = socket_create(AF_INET, SOCK_DGRAM, 0);
     socket_set_option($sock, SOL_SOCKET, SO_BROADCAST, 1);
@@ -74,21 +72,18 @@ function send_command($ip, $command, $password)
 	}
 }
 // decription text
-function decrypt_answer($text, $password)
-    {
+function decrypt_answer($text, $password) {
     $iv = 'erghnlhbnmbnkghy';
     $result = openssl_decrypt($text, 'AES-256-CBC', $password, OPENSSL_RAW_DATA, $iv);
     return $result;
     }
 // encription text
-function encrypt_answer($text, $password)
-    {
+function encrypt_answer($text, $password) {
     $iv = 'erghnlhbnmbnkghy';
     $result = openssl_encrypt($text, 'AES-256-CBC', $password, OPENSSL_RAW_DATA, $iv);
     return $result;
     }
-function key_power($ip, $password)
-    {
+function key_power($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -100,8 +95,7 @@ function key_power($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_mute($ip, $password)
-    {
+function key_mute($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -113,8 +107,7 @@ function key_mute($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_audiomode($ip, $password)
-    {
+function key_audiomode($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -126,8 +119,7 @@ function key_audiomode($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_setting($ip, $password)
-    {
+function key_setting($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -139,8 +131,7 @@ function key_setting($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_red($ip, $password)
-    {
+function key_red($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -152,8 +143,7 @@ function key_red($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_green($ip, $password)
-    {
+function key_green($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -165,8 +155,7 @@ function key_green($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_yellow($ip, $password)
-    {
+function key_yellow($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -178,8 +167,7 @@ function key_yellow($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_blue($ip, $password)
-    {
+function key_blue($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -191,8 +179,7 @@ function key_blue($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_menu($ip, $password)
-    {
+function key_menu($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -204,8 +191,7 @@ function key_menu($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_back($ip, $password)
-    {
+function key_back($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -217,8 +203,7 @@ function key_back($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_exit($ip, $password)
-    {
+function key_exit($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -230,8 +215,7 @@ function key_exit($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_info($ip, $password)
-    {
+function key_info($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -243,8 +227,7 @@ function key_info($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_app($ip, $password)
-    {
+function key_app($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -256,8 +239,7 @@ function key_app($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_tv($ip, $password)
-    {
+function key_tv($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -269,8 +251,7 @@ function key_tv($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_guide($ip, $password)
-    {
+function key_guide($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -282,8 +263,7 @@ function key_guide($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_rew($ip, $password)
-    {
+function key_rew($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -295,8 +275,7 @@ function key_rew($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_ffwd($ip, $password)
-    {
+function key_ffwd($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -308,8 +287,7 @@ function key_ffwd($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_play($ip, $password)
-    {
+function key_play($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -321,8 +299,7 @@ function key_play($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_stop($ip, $password)
-    {
+function key_stop($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -334,8 +311,7 @@ function key_stop($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_size($ip, $password)
-    {
+function key_size($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -347,8 +323,7 @@ function key_size($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_reload($ip, $password)
-    {
+function key_reload($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -360,8 +335,7 @@ function key_reload($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_1($ip, $password)
-    {
+function key_1($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -373,8 +347,7 @@ function key_1($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_2($ip, $password)
-    {
+function key_2($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -386,8 +359,7 @@ function key_2($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_3($ip, $password)
-    {
+function key_3($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -399,8 +371,7 @@ function key_3($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_4($ip, $password)
-    {
+function key_4($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -412,8 +383,7 @@ function key_4($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_5($ip, $password)
-    {
+function key_5($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -425,8 +395,7 @@ function key_5($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_6($ip, $password)
-    {
+function key_6($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -438,8 +407,7 @@ function key_6($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_7($ip, $password)
-    {
+function key_7($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -451,8 +419,7 @@ function key_7($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_8($ip, $password)
-    {
+function key_8($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -464,8 +431,7 @@ function key_8($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_9($ip, $password)
-    {
+function key_9($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -477,8 +443,7 @@ function key_9($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_0($ip, $password)
-    {
+function key_0($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -490,8 +455,7 @@ function key_0($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_home($ip, $password)
-    {
+function key_home($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -503,8 +467,7 @@ function key_home($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_ok($ip, $password)
-    {
+function key_ok($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -516,8 +479,7 @@ function key_ok($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_volumedown($ip, $password)
-    {
+function key_volumedown($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -529,8 +491,7 @@ function key_volumedown($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_volumeup($ip, $password)
-    {
+function key_volumeup($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -542,8 +503,7 @@ function key_volumeup($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_up($ip, $password)
-    {
+function key_up($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -555,8 +515,7 @@ function key_up($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_down($ip, $password)
-    {
+function key_down($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -568,8 +527,7 @@ function key_down($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_left($ip, $password)
-    {
+function key_left($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
@@ -581,8 +539,7 @@ function key_left($ip, $password)
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_rigth($ip, $password)
-    {
+function key_rigth($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
