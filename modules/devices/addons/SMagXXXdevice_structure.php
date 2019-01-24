@@ -6,7 +6,6 @@ $this->device_types['MagXXXdevice'] = array(
         'CLASS'=>'SMagXXXdevice',
         'PROPERTIES'=>array(
             'ipaddres'=>array('DESCRIPTION'=>'IP адрес устройства', '_CONFIG_TYPE'=>'text', 'KEEP_HISTORY'=>0, 'DATA_KEY'=>1),
-            'port'=>array('DESCRIPTION'=>'Порт устройства', '_CONFIG_TYPE'=>'text', 'KEEP_HISTORY'=>0, 'DATA_KEY'=>1),
             'password'=>array('DESCRIPTION'=>'Пароль для устройства', '_CONFIG_TYPE'=>'text', 'KEEP_HISTORY'=>0, 'DATA_KEY'=>1),
             'mute_unmute'=>array('DESCRIPTION'=>'Отключение/включение звука', 'KEEP_HISTORY'=>1, 'ONCHANGE'=>'mute-unmute', 'DATA_KEY'=>1),
             'volumeup'=>array('DESCRIPTION'=>'Уровень звука выше', 'KEEP_HISTORY'=>1, 'ONCHANGE'=>'volumeup', 'DATA_KEY'=>1),
