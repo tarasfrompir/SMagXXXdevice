@@ -539,7 +539,7 @@ function key_left($ip, $password) {
     $answer = $this->send_command($ip, $command, $password);
     return $answer;
     }
-function key_rigth($ip, $password) {
+function key_right($ip, $password) {
     $command = array(
         "msgType" => "keyboardKey",
         "action" => "press",
