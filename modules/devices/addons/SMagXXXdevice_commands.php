@@ -23,4 +23,6 @@ if ($device_type == 'MagXXXdevice') {
    }
   }
 }
+    $processed = 0;
+    $reply_confirm = 0;
 }
