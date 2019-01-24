@@ -6,4 +6,3 @@ $password = $this->getProperty("password");
 // Create Chromecast object and give IP and Port
 $mag = new MAG250();
 $mag->key_9($adress, $password);
-$this->setProperty("9",0);
