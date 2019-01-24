@@ -1,18 +1,6 @@
 <?php
 if ($device_type == 'MagXXXdevice') {
-    if (preg_match('/' . LANG_DEVICES_PATTERN_TURNON . '/uis', $command)) {
-        sayReplySafe(LANG_TURNING_ON . ' ' . $device_title . $add_phrase, 2);
-        $run_code.= "callMethodSafe('$linked_object.turnOn');";
-        $opposite_code.= "callMethodSafe('$linked_object.turnOff');";
-        $processed = 1;
-        $reply_confirm = 1;
-    } else if (preg_match('/' . LANG_DEVICES_PATTERN_TURNOFF . '/uis', $command)) {
-        sayReplySafe(LANG_TURNING_OFF . ' ' . $device_title . $add_phrase, 2);
-        $run_code.= "callMethodSafe('$linked_object.turnOff');";
-        $opposite_code.= "callMethodSafe('$linked_object.turnOn');";
-        $processed = 1;
-        $reply_confirm = 1;
-    } else if (preg_match('/' . LANG_SMagXXXdevice_PATTERN_PRESS . '/uis', $command)) {
+   if (preg_match('/' . LANG_SMagXXXdevice_PATTERN_PRESS . '/uis', $command)) {
         $keys = array(
             '999' => LANG_SMagXXXdevice_PATTERN_999,
             '998' => LANG_SMagXXXdevice_PATTERN_998,
@@ -1020,17 +1008,29 @@ if ($device_type == 'MagXXXdevice') {
                 // sayReplySafe(LANG_SMagXXXdevice_PRESSED . ' ' . $key_code . ' на устройстве ' . $device_title, 2);
                 for ($i = 0; $i < strlen((string)$key_code); $i++) {
                     $letter = substr($key_code, $i, 1);
-                    $run_code.= "callMethodSafe('$linked_object.$letter');";
-                    $opposite_code.= "callMethodSafe('$linked_object.$letter');";
+					say ($letter);
+                    $run_code.= "callMethod('$linked_object.$letter');";
+                    $opposite_code.= "callMethod('$linked_object.$letter');";
                 };
                 $processed = 1;
                 $reply_confirm = 1;
                 break;
             }
-            else {
-                $processed = 0;
-                $reply_confirm = 0;
-            }
         }
+    } else if (preg_match('/' . LANG_DEVICES_PATTERN_TURNON . '/uis', $command)) {
+        sayReplySafe(LANG_TURNING_ON . ' ' . $device_title . $add_phrase, 2);
+        $run_code.= "callMethodSafe('$linked_object.turnOn');";
+        $opposite_code.= "callMethodSafe('$linked_object.turnOff');";
+        $processed = 1;
+        $reply_confirm = 1;
+    } else if (preg_match('/' . LANG_DEVICES_PATTERN_TURNOFF . '/uis', $command)) {
+        sayReplySafe(LANG_TURNING_OFF . ' ' . $device_title . $add_phrase, 2);
+        $run_code.= "callMethodSafe('$linked_object.turnOff');";
+        $opposite_code.= "callMethodSafe('$linked_object.turnOn');";
+        $processed = 1;
+        $reply_confirm = 1;
+    }  else {
+        $processed = 0;
+        $reply_confirm = 0;
     }
 }
