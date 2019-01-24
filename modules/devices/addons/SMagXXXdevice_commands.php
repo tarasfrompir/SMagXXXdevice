@@ -13,14 +13,14 @@ if ($device_type == 'MagXXXdevice') {
    '9' => LANG_SMagXXXdevice_PATTERN_9,
    '0' => LANG_SMagXXXdevice_PATTERN_0
   );
-  foreach($keys as $key_code => $key_words) {
-   if(preg_match('/' . $key_words . '/uis', $command)) {
-    //$run_code .= "setGlobal('$linked_object.color', $color_code);";
-    sayReplySafe(LANG_SMagXXXdevice_PRESSED . ' ' . $key_code . ' на устройстве ' . $device_title, 2);
-    $run_code .= "callMethodSafe('$linked_object.'.$key_code);";
+  foreach($keys as $key_code => $key_word) {
+   if(preg_match('/' . $key_word . '/uis', $command)) {
+    //sayReplySafe(LANG_SMagXXXdevice_PRESSED . ' ' . $key_code . ' на устройстве ' . $device_title, 2);
+    callMethodSafe($linked_object.'.'.$key_code);
     $processed = 1;
     $reply_confirm = 1;
     break;
    }
   }
+}
 }
