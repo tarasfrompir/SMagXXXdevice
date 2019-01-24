@@ -1,7 +1,7 @@
 <?php
 $dictionary = array(
  'SMagXXXdevice_PRESSED' => 'нажата кнопка ',
- 'SMagXXXdevice_PATTERN_PRESS' => 'нажми|включи|нажми кнопку',
+ 'SMagXXXdevice_PATTERN_PRESS' => 'нажми|включи|нажми кнопку|включи канал',
  'SMagXXXdevice_PATTERN_1' => '1|один',
  'SMagXXXdevice_PATTERN_2' => '2|два',
  'SMagXXXdevice_PATTERN_3' => '3|три',
