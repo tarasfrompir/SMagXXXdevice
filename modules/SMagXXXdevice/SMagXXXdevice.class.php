@@ -10,7 +10,7 @@ class SMagXXXdevice extends module {
 */
 function SMagXXXdevice() {
   $this->name="SMagXXXdevice";
-  $this->title=SMagXXXdevice_MODULE_NAME;
+  $this->title=LANG_SMagXXXdevice_MODULE_NAME;
   $this->module_category="<#LANG_SECTION_DEVICES#>";
   $this->checkInstalled();
 }
