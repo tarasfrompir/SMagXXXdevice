@@ -1,5 +1,6 @@
 <?php
 $dictionary = array(
+ 'SMagXXXdevice_MODULE_NAME' => 'Приставка МАG 250-255 (Aura HD)',
  'SMagXXXdevice_PATTERN_PRESS' => 'нажми|включи канал|выбери канал|канал|клацни',
  'SMagXXXdevice_PATTERN_LEFT' => 'влево|кнопка влево',
  'SMagXXXdevice_PATTERN_RIGHT' => 'вправо|кнопка вправо',
