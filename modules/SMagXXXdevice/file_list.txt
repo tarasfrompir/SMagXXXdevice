@@ -38,6 +38,8 @@
 /modules/devices/SMagXXXdevice_turnOn.php
 /modules/devices/SMagXXXdevice_tv.php
 /modules/devices/SMagXXXdevice_up.php
+/modules/devices/SMagXXXdevice_volumedown.php
+/modules/devices/SMagXXXdevice_volumeup.php
 /modules/devices/classes_for_addons/SMagXXXdevice_class1.php
 /modules/devices/addons/SMagXXXdevice_commands.php
 /modules/devices/addons/SMagXXXdevice_structure.php
