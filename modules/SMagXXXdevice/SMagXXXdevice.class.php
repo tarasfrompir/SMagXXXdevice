@@ -33,7 +33,6 @@ function SMagXXXdevice() {
 *
 * Module uninstall routine
 *
-* @access publ
 */
  function uninstall() {
 
