@@ -41,3 +41,5 @@
 /modules/devices/classes_for_addons/SMagXXXdevice_class1.php
 /modules/devices/addons/SMagXXXdevice_commands.php
 /modules/devices/addons/SMagXXXdevice_structure.php
+/templates/classes/views/SMagXXXdevice.html
+/languages/SMagXXXdevice_ru.php
