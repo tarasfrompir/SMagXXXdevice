@@ -39,7 +39,8 @@ function SMagXXXdevice() {
   // удаляем файлы модуля-дополнения
     if ($file = fopen("file_list.txt", "r")) {
     while(!feof($file)) {
-        $line = fgets($file);
+        $line = preg_replace('/\p{Cc}+/u', '', fgets($file));
+        echo ($line);
         @unlink(realpath(ROOT.$line));
     }
     fclose($file);
