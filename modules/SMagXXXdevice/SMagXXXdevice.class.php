@@ -47,7 +47,7 @@ function SMagXXXdevice() {
   // удаляем методы и класс устройства
    $rec = SQLSelectOne("SELECT * FROM classes WHERE TITLE = '" . $this->name . "'");
    if ($rec['ID']) {
-     SQLExec("DELETE FROM methods WHERE CLASS_ID='".$rec['ID'].')';
+     SQLExec("DELETE FROM methods WHERE CLASS_ID='".$rec['ID']."'");
      SQLExec("DELETE FROM classes WHERE TITLE='".$this->name . "'");
    }
   parent::uninstall();
