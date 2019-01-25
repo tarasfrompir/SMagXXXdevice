@@ -1,6 +1,18 @@
 <?php
 $dictionary = array(
- 'SMagXXXdevice_PATTERN_PRESS' => 'нажми|включи|клацни',
+ 'SMagXXXdevice_PATTERN_PRESS' => 'нажми|включи канал|выбери канал|канал|клацни',
+ 'SMagXXXdevice_PATTERN_LEFT' => 'влево|кнопка влево',
+ 'SMagXXXdevice_PATTERN_RIGHT' => 'вправо|кнопка вправо',
+ 'SMagXXXdevice_PATTERN_UP' => 'вверх|кнопка вверх',
+ 'SMagXXXdevice_PATTERN_DOWN' => 'вниз|кнопка вниз',
+ 'SMagXXXdevice_PATTERN_WUP' => 'добавить громкости|добавить звук|добавь звук',
+ 'SMagXXXdevice_PATTERN_WDOWN' => 'убавить громкость|убавить звук|убавь звук',
+ 'SMagXXXdevice_PATTERN_MENU' => 'меню|кнопка меню|нажми меню',
+ 'SMagXXXdevice_PATTERN_F1' => 'кнопка ф 1|ф1',
+ 'SMagXXXdevice_PATTERN_F2' => 'кнопка ф 2|ф2',
+ 'SMagXXXdevice_PATTERN_F3' => 'кнопка ф 3|ф3',
+ 'SMagXXXdevice_PATTERN_F4' => 'кнопка ф 4|ф4',
+ 
  'SMagXXXdevice_PATTERN_1' => '1|один|первый',
  'SMagXXXdevice_PATTERN_2' => '2|два|второй',
  'SMagXXXdevice_PATTERN_3' => '3|три|третий',
