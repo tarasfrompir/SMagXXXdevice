@@ -149,8 +149,9 @@ function usual(&$out) {
 */
  function install($data='') {
   parent::install();
-  
-
+  $rec = SQLSelectOne("SELECT * FROM project_modules WHERE NAME = '" . $this->name . "'");
+  $rec['HIDDEN'] = 1;
+  SQLUpdate('project_modules', $rec)
  }
 /**
 * Uninstall
@@ -173,17 +174,5 @@ function usual(&$out) {
   }
 
   parent::uninstall();
- }
-
-
-/**
-* dbInstall
-*
-* Database installation routine
-*
-* @access private
-*/
- function dbInstall($data) {
-  parent::dbInstall($data);
  }
 }
