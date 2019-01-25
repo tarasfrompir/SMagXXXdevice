@@ -39,7 +39,8 @@ function SMagXXXdevice() {
   // удаляем файлы модуля-дополнения
   if ($file = fopen("file_list.txt", "r")) {
     while(!feof($file)) {
-        $line = fgets($file);
+        $line = substr(fgets($file), 0, -2);
+        echo ($line);
         if (!file_exists(ROOT.$line)) {
             @unlink(ROOT.$line);
         }
