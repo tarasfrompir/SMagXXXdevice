@@ -151,7 +151,7 @@ function usual(&$out) {
   parent::install();
   $rec = SQLSelectOne("SELECT * FROM project_modules WHERE NAME = '" . $this->name . "'");
   $rec['HIDDEN'] = 1;
-  SQLUpdate('project_modules', $rec)
+  SQLUpdate('project_modules', $rec);
  }
 /**
 * Uninstall
