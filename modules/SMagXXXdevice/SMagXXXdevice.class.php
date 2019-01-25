@@ -39,7 +39,7 @@ function SMagXXXdevice() {
   // удаляем файлы модуля-дополнения
     if ($file = fopen("file_list.txt", "r")) {
     while(!feof($file)) {
-        $line = substr(fgets($file), 0, -2);
+        $line = preg_replace('/[^A-Za-z0-9 _\-\+\&]/','',fgets($file));
         @unlink(realpath(ROOT.$line));
     }
     fclose($file);
