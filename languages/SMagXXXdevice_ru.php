@@ -13,6 +13,8 @@ $dictionary = array(
  'SMagXXXdevice_PATTERN_F2' => 'кнопка ф 2|ф2',
  'SMagXXXdevice_PATTERN_F3' => 'кнопка ф 3|ф3',
  'SMagXXXdevice_PATTERN_F4' => 'кнопка ф 4|ф4',
+ 'SMagXXXdevice_PATTERN_HOME' => 'кнопка домой|домой',
+ 'SMagXXXdevice_PATTERN_GUIDE' => 'кнопка путеводитель|путеводитель',
  
  'SMagXXXdevice_PATTERN_1' => '1|один|первый',
  'SMagXXXdevice_PATTERN_2' => '2|два|второй',
