@@ -1082,6 +1082,16 @@ if ($device_type == 'MagXXXdevice') {
         $opposite_code.= "callMethodSafe('$linked_object.turnOn');";
         $processed = 1;
         $reply_confirm = 1;
+    } else if (preg_match('/' . LANG_DEVICES_PATTERN_HOME . '/uis', $command)) {
+        //sayReplySafe(LANG_TURNING_OFF . ' ' . $device_title . $add_phrase, 2);
+        $run_code.= "callMethodSafe('$linked_object.home');";
+        $processed = 1;
+        $reply_confirm = 1;
+    } else if (preg_match('/' . LANG_DEVICES_PATTERN_GUIDE . '/uis', $command)) {
+        //sayReplySafe(LANG_TURNING_OFF . ' ' . $device_title . $add_phrase, 2);
+        $run_code.= "callMethodSafe('$linked_object.Guide');";
+        $processed = 1;
+        $reply_confirm = 1;
     }  else {
         $processed = 0;
         $reply_confirm = 0;
