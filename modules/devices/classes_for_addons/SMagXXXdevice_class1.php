@@ -40,11 +40,12 @@ function scan_device() {
 // command must be array
 function send_command($ip, $command, $password) {
     // create socket
+	DebMes('MAG 250 ip='.$ip. ' command='.$command.' password='. $password);
     $sock = socket_create(AF_INET, SOCK_DGRAM, 0);
     socket_set_option($sock, SOL_SOCKET, SO_BROADCAST, 1);
     socket_bind($sock, 0, 6777);
-	// befor send command need the check link
-	$arr=array('msgType'=>'pingRequest');
+    // befor send command need the check link
+    $arr=array('msgType'=>'pingRequest');
     $post_data = json_encode($arr);
     socket_sendto($sock, $post_data, strlen($post_data), 0, $ip, 7666);
 	
@@ -65,11 +66,12 @@ function send_command($ip, $command, $password) {
         }
     } while (!is_null($buf));
     socket_close($sock);
-	if ($decript='{"msgType":"pingResponse"}'){
-	    return 'ok';
-	} else {
+    DebMes('MAG250 '.$decript);
+    if ($decript='{"msgType":"pingResponse"}'){
+        return 'ok';
+    } else {
         return;
-	}
+    }
 }
 // decription text
 function decrypt_answer($text, $password) {
