@@ -10,7 +10,6 @@ $command = $details['message'];
 
 //if ($device_type == 'MagXXXdevice') {
 if (1) {
-	DebMes('ПУ текст '.$command);
    if (preg_match('/' . LANG_SMagXXXdevice_PATTERN_PRESS . '/uis', $command)) {
         $keys = array(
             '999' => LANG_SMagXXXdevice_PATTERN_999,
