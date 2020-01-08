@@ -1,5 +1,16 @@
 <?php
-if ($device_type == 'MagXXXdevice') {
+/*
+ * array('level' => $level, 'message' => $ph, 'member_id' => $member_id)
+ * $details['BREAK'] = 1 / 0
+ */
+@include_once(ROOT . 'languages/SMagXXXdevice' . '_' . SETTINGS_SITE_LANGUAGE . '.php');
+@include_once(ROOT . 'languages/SMagXXXdevice_default' . '.php');
+
+$command = $details['message'];
+
+//if ($device_type == 'MagXXXdevice') {
+if (1) {
+	DebMes('ПУ текст '.$command);
    if (preg_match('/' . LANG_SMagXXXdevice_PATTERN_PRESS . '/uis', $command)) {
         $keys = array(
             '999' => LANG_SMagXXXdevice_PATTERN_999,
